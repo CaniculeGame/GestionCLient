@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>UIStock</class>
+ <widget class="QMainWindow" name="UIStock">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion Stock</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="label_titre_filtre">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Filtre</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QComboBox" name="categorie_cb">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="soins_cb">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="benefice_cb">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="filtre_button">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Filtrer</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="add_label">
+          <property name="styleSheet">
+           <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Ajouter un produit:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
+          </property>
+          <item>
+           <widget class="QLabel" name="intitule_label">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Intitulé</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="intitule_lineedit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Soins associé</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="soins_list"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_nb_acheter">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Nombre acheté</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="nb_acheter_spinbox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_prix">
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+     font: bold 12px;
+     min-width: 10em;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Prix unitaire</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="prix_dspinbox"/>
+          </item>
+          <item>
+           <widget class="QPushButton" name="reinit_button">
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+
+</string>
+            </property>
+            <property name="text">
+             <string>Reinitialiser</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="add_produit">
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Ajouter</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QScrollArea" name="produit">
+        <property name="minimumSize">
+         <size>
+          <width>600</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="baseSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="grid">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>598</width>
+           <height>476</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QPushButton" name="return_button">
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="reinit_all_button">
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Tout réinitialiser</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="accepter_button">
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Enregistrer </string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

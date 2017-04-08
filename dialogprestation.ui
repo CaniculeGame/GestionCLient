@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogPrestation</class>
+ <widget class="QDialog" name="DialogPrestation">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Ajout Prestations</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog
+{
+	background-image:url(image/bg_400x300.png);
+	background-repeat:repeat-x;
+	background-color:#97d562;
+
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QTreeView" name="treeView_liste">
+       <property name="styleSheet">
+        <string notr="true">QTreeView::item:selected 
+{
+
+     background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,stop:0 #b0e563, stop: 0.5 #97d562);
+ 
+	 color: #000000;
+ }
+
+
+QTreeView::item:hover 
+{
+     background-color:#b0e563;
+	 color: #000000;
+ }
+
+QTreeView
+{
+	background-image:url(image/bg-tableview.jpg);
+}</string>
+       </property>
+       <attribute name="headerVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+     <item>
+      <widget class="QListView" name="listView_choix">
+       <property name="styleSheet">
+        <string notr="true">QListView
+{
+	background-image:url(image/bg-tableview.jpg);
+}</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDateEdit" name="dateEdit"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_modificateur_prix">
+     <property name="text">
+      <string>Ajout de modificateur de prix:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="layout_add_promo">
+     <item>
+      <widget class="QPushButton" name="button_ajout_promo">
+       <property name="styleSheet">
+        <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Ajouter</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_ss_reduc">
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_prix">
+     <property name="text">
+      <string>Prix total:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="label_nbChoix">
+     <property name="text">
+      <string>Nb articles:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButton_init">
+       <property name="styleSheet">
+        <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Réinitialiser</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/Undo.png</normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/Undo.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_Annuler">
+       <property name="styleSheet">
+        <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Annuler</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/Cancel.png</normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/Cancel.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_OK">
+       <property name="styleSheet">
+        <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Valider</string>
+       </property>
+       <property name="icon">
+        <iconset>
+         <normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/save.png</normaloff>../build-JustinePgm-Desktop_Qt_5_4_0_MinGW_32bit-Debug/save.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>15</width>
+         <height>15</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

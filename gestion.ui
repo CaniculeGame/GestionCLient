@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Gestion</class>
+ <widget class="QMainWindow" name="Gestion">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>704</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Statistiques</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="titre_label">
+        <property name="styleSheet">
+         <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>TextLabel</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QFrame" name="grille_statistique">
+          <property name="minimumSize">
+           <size>
+            <width>600</width>
+            <height>600</height>
+           </size>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QTableView" name="vue_grille"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="Line" name="line_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_vue">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+            </property>
+            <property name="text">
+             <string>Vues</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_ca">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Chiffre d'affaire</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_frequentation">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Fréquentation</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="button_benefice">
+            <property name="minimumSize">
+             <size>
+              <width>130</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Bénéfice</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="buton_depense">
+            <property name="styleSheet">
+             <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+            </property>
+            <property name="text">
+             <string>Dépense</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_options">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>50</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+              </property>
+              <property name="text">
+               <string>Options</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="reel_button">
+              <property name="text">
+               <string>Dépense réel/théorique</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkbox_variation">
+              <property name="text">
+               <string>Afficher Variations</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkbox_couleur">
+              <property name="text">
+               <string>Afficher Couleurs</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkbox_var_couleur">
+              <property name="text">
+               <string>Variations de couleurs</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_4">
+      <item>
+       <widget class="QPushButton" name="button_retour">
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Retour</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_print">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Imprimer vue</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

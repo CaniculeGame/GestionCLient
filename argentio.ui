@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ArgentIO</class>
+ <widget class="QMainWindow" name="ArgentIO">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>855</width>
+    <height>601</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Entrées/Sorties</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_8">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_7">
+      <item>
+       <widget class="QLabel" name="label_entree">
+        <property name="styleSheet">
+         <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Dons ( entrées d'argent )</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="grid_entree"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <widget class="QLabel" name="label_sorties">
+        <property name="styleSheet">
+         <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Dépenses ( sorties d'argent )</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="grid_sortie"/>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_ajout">
+      <property name="styleSheet">
+       <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Ajouter une entrée/sortie</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="instruction">
+      <property name="text">
+       <string>Pour ajouter une dépense: Mettre un cout negatif sinon mettre un cout positif </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_intitule">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Intitulé</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="lineedit_intitule"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QLabel" name="label_prix">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Cout (€)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDoubleSpinBox" name="spinbox_prix">
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="minimum">
+           <double>-1000000.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000000.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_repetition_type">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Repetition</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="combobox_repetition"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 3em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbx_type_ajout"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_repetition">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Nombre de fois</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinbox_reptition">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>9999</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_date">
+          <property name="styleSheet">
+           <string notr="true">QLabel 
+{
+     font: bold 12px;
+     min-width: 8em;
+     padding: 7px;
+}
+</string>
+          </property>
+          <property name="text">
+           <string>Date de début</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDateEdit" name="dateedit_repetition"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="button_ajout">
+        <property name="styleSheet">
+         <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 5em;
+     padding: 7px;
+}
+
+</string>
+        </property>
+        <property name="text">
+         <string>Ajouter</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="button_retour">
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

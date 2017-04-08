@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WindowPromo</class>
+ <widget class="QMainWindow" name="WindowPromo">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gestion des promotions</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="checkbox_show_disable">
+        <property name="text">
+         <string>Afficher promotions désactivées</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTableView" name="tableView"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLineEdit" name="intitule"/>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="valeur_reductuin_pourcent"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cbbox_comportement"/>
+        </item>
+        <item>
+         <widget class="QComboBox" name="produit_liste"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="add_button">
+          <property name="styleSheet">
+           <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+</string>
+          </property>
+          <property name="text">
+           <string>Ajouter</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="retour_buton">
+      <property name="styleSheet">
+       <string notr="true">QPushButton 
+{
+	background-image:url(image/bg-button_ns.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+QPushButton:pressed 
+{
+     background-image:url(image/bg-button_s.png);
+	background-repeat:repeat-xy;
+    border-color:#739442;
+     border-style: inset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+ }
+
+QPushButton:hover:!pressed
+{
+	background-image:url(image/bg-button_h.png);
+	background-repeat:repeat-xy;
+    border-color:#c2bf48;
+     border-style: outset;
+     border-width: 2px;
+     border-radius: 2px;
+     font: bold 12px;
+     min-width: 10em;
+     padding: 7px;
+}
+
+</string>
+      </property>
+      <property name="text">
+       <string>Retour</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
